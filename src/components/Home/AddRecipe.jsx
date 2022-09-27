@@ -26,7 +26,7 @@ const AddRecipe = () => {
   };
 
   const handleChange = (e)=>{
-    const {id, value} = e.target.value;
+    const {id, value} = e.target;
     setData({
         ...data,
         [id]:value

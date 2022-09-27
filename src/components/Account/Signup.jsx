@@ -1,5 +1,6 @@
-import React from 'react'
-import "../Home/Home.scss"
+import axios from 'axios';
+import React, { useState } from 'react'
+import "./account.scss"
 
 const Signup = () => {
     const [data, setData] = useState({
@@ -17,11 +18,11 @@ const Signup = () => {
             password: ""
           });
         });
-        alert("You have Successfully added Food Recipe")
+        // alert("You have Successfully added Food Recipe")
       };
     
       const handleChange = (e)=>{
-        const {id, value} = e.target.value;
+        const {id, value} = e.target;
         setData({
             ...data,
             [id]:value
@@ -29,31 +30,31 @@ const Signup = () => {
       }
     
       return (
-        <div className="add">
+        <div className="signup">
           <div>
             <h1>SIGNUP</h1>
             <input 
-              type="text" 
+              type="name" 
               id="name"
               onChange={handleChange}
               value={data.name}
-              placeholder="Enter Name of the recipe.." 
+              placeholder="Enter Name" 
             />
             <br />
             <input 
-              type="text" 
+              type="email" 
               id="email"
               onChange={handleChange}
               value={data.email}
-              placeholder="Enter Image URL" 
+              placeholder="Enter Email" 
             />
             <br />
             <input 
-              type="text" 
+              type="password" 
               id="password"
               onChange={handleChange}
               value={data.password}
-              placeholder="Enter Food Description.." 
+              placeholder="Enter Password" 
             />
             <br />
             <button onClick={()=>{
