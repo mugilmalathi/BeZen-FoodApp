@@ -1,0 +1,149 @@
+.home{
+    // padding: 100px;
+    width: 100vw;
+    height: 100vh;
+}
+
+// .search-icon{
+//     color: gray;
+//     // border: 1px solid red;
+//     font-size: 25px;
+//     display: flex;
+//     position: relative;
+//     left: 65%;
+//     margin-bottom: -50px;
+// }
+
+.content{
+    width: 60%;
+    // height: 100vh;
+    margin: auto;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border: 1px solid gray;
+}
+
+.box{
+    width: 100%;
+    height: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: small;
+}
+
+.box > div{
+    width: 100%;
+    height: 60%;
+}
+
+.box > div:nth-child(1) > img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box > div:nth-child(2) {
+    width: 100%;
+    height: 10%;
+    // border: 1px solid red;
+}
+.box > div:nth-child(3) {
+    width: 100%;
+    height: 10%;
+    // border: 1px solid red;
+}
+
+.box > div:nth-child(4) {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    // border: 1px solid red;
+}
+
+.box > div:nth-child(4) > button{
+    width: 80px;
+    height: 80%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    color: white;
+    cursor: pointer;
+    background: teal;
+}
+
+ul li{
+    list-style: none;
+}
+
+.add{
+    width: 100%;
+    height: 100vh;
+    // position: relative;
+    margin-bottom: 5%;
+    // border: 1px solid gray;
+}
+.add > div{
+    width: 30%;
+    height: 95%;
+    margin: auto;
+    margin-top: 5%;
+    // margin-bottom: 5%;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    // border: 1px solid red;
+    text-align: center;
+}
+
+.add > div > h1{
+    text-align: center;
+    background: #281585;
+    background: -webkit-linear-gradient(to right, #281585 0%, #800D0B 100%);
+    background: -moz-linear-gradient(to right, #281585 0%, #800D0B 100%);
+    background: linear-gradient(to right, #281585 0%, #800D0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.add > div > input{
+    width: 85%;
+    height: 5vh;
+    margin-top: 10%;
+    padding-left: 5%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.add > div > textarea{
+    width: 85%;
+    height: 15vh;
+    margin-top: 10%;
+    padding-left: 5%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.add > div > button{
+    margin-top: 7%;
+    width: 90%;
+    height: 7vh;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid transparent;
+    background: rgb(15,116,126);
+    background: linear-gradient(90deg, rgba(15,116,126,1) 0%, rgba(18,14,61,1) 89%);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.add > div > button:hover{
+    background: rgb(107,15,15);
+    background: linear-gradient(90deg, rgba(107,15,15,1) 0%, rgba(18,14,61,1) 89%);
+}
