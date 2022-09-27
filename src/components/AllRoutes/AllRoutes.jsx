@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
+import Signin from '../Account/Signin'
 import Signup from '../Account/Signup'
 import Footer from '../Footer/Footer'
 import AddRecipe from '../Home/AddRecipe'
@@ -16,6 +17,7 @@ const AllRoutes = () => {
             <Route path="/update" element={<UpdateData />} />
             <Route path="/add" element={<AddRecipe />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/signin" element={<Signin />} />
         </Routes>
         <Footer />
     </div>

@@ -1,5 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import "./account.scss"
 
 const Signup = () => {
@@ -9,8 +11,10 @@ const Signup = () => {
         password: ""
       });
     
+    const navigate = useNavigate();
+    
       const handleSubmit = (e) => {
-        axios.post("https://food-recipe-details.herokuapp.com/food", data)
+        axios.post("https://food-recipe-details.herokuapp.com/userdetailss", data)
         .then(() => {
           setData({
             name: "",
@@ -19,6 +23,7 @@ const Signup = () => {
           });
         });
         // alert("You have Successfully added Food Recipe")
+        navigate("/signin")
       };
     
       const handleChange = (e)=>{
@@ -60,7 +65,9 @@ const Signup = () => {
             <button onClick={()=>{
                 handleSubmit(data)
             }}>Submit</button>
+            <div>Alreacy an Account <Link to="/signin" style={{color:"gray"}}>Click Here</Link></div>
           </div>
+          
         </div>
       );
     };
