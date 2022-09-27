@@ -16,14 +16,15 @@ const Signin = () => {
     .then((res)=>{
       setData(res.data)
     })
-  }, [])
+  }, [data])
 
 
   const handleLogin = ()=>{
-    localStorage.setItem("email", JSON.stringify(email))
     data.map((e)=>{
-      if(e.email === email){
+      if(e.email === email && e.password === password){
         navigate("/")
+        localStorage.setItem("name", JSON.stringify(e.name))
+        localStorage.setItem("email", JSON.stringify(email))
       }else{
         console.log("Wrong Credentials...!")
       }
