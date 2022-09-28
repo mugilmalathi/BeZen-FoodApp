@@ -27,7 +27,7 @@
 Signup Page:
 ![](/screenshots/signup.png)
 SignIn Page:
-![](/screenshots/signin.png)
+![](/screenshots/login.png)
  Landing Page:
  ![](/screenshots/landingpage.png)
   Add Recipe Page:
