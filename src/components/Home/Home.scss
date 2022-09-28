@@ -258,10 +258,12 @@ ul li{
 }
 .sstep{
     width: 60%;
+    height: 40px;
     margin: auto;
     margin-top: 2%;
     font-size: small;
     color: gray;
+    overflow-y: scroll;
 }
 
 
