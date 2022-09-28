@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import "../Responsive/Responsive.scss"
 import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {

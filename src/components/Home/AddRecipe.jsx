@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./Home.scss";
+import "../Responsive/Responsive.scss"
 
 const AddRecipe = () => {
   const [data, setData] = useState({

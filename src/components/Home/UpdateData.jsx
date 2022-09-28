@@ -1,29 +1,34 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import "../Responsive/Responsive.scss"
 
 const UpdateData = () => {
-  const [data, setData] = useState({
+
+  const[data, setData]=useState({
     name: "",
     img: "",
     desc: "",
     ingredients: "",
     steps: "",
-  });
-
-  const handleSubmit = (e) => {
-    axios.patch("https://food-recipe-details.herokuapp.com/food", data)
-    .then(() => {
-      setData({
-        name: "",
-        img: "",
-        desc: "",
-        ingredients: "",
-        steps: "",
-      });
-    });
-    alert("You have Successfully added Food Recipe")
-  };
-
+  })
+  const id = JSON.parse(localStorage.getItem("foodID"))
+ 
+  const handleSubmit = ()=>{
+    fetch(`https://food-recipe-details.herokuapp.com/food/${id}`,{
+            method: 'PATCH'
+        }).then((result)=>{
+            result.json()
+        }).then(() => {
+          setData({
+            name: "",
+            img: "",
+            desc: "",
+            ingredients: "",
+            steps: "",
+          });
+        });
+  }
+  
   const handleChange = (e)=>{
     const {id, value} = e.target;
     setData({
@@ -77,9 +82,9 @@ const UpdateData = () => {
           placeholder="Enter the Steps..."
         ></textarea>
         <br />
-        <button onClick={()=>{
-            handleSubmit(data)
-        }}>Submit</button>
+        <button 
+        onClick={handleSubmit}
+        >Submit</button>
       </div>
     </div>
   );

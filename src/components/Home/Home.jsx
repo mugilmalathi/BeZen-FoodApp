@@ -1,17 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./Home.scss"
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 import axios from 'axios';
 import { useNavigate } from 'react-router';
-import { useParams } from 'react-router-dom';
-import { GlobalContex } from '../../GlobalContex';
 
 const Home = () => {
 
     const[search, setSearch]=useState("")
     const[data, setData]=useState([])
     const navigate = useNavigate()
-    const debounce = data.filter((e)=>e.name.toLowerCase().includes(search))
 
     useEffect(()=>{
         axios.get("https://food-recipe-details.herokuapp.com/food")
@@ -31,6 +28,17 @@ const Home = () => {
         })
     }
 
+    const handleUpdate = (id)=>{
+        // console.log(id, "checking checking cehecking ID");
+        localStorage.setItem("foodID", JSON.stringify(id))
+    }
+
+    const handleSingleFood =(event)=>{
+        console.log(event, 'checking checking checking...')
+        localStorage.setItem("singleFood", JSON.stringify(event))
+        navigate("/singleFood")
+    }
+
 
   return (
     <div className='home'>
@@ -46,14 +54,18 @@ const Home = () => {
           </div>
         <div className='content'>
             {
-                debounce.map((el)=>{
+                data.filter((e)=>e.name.toLowerCase().includes(search))
+                .map((el)=>{
                     return(
-                        <div className='box'>
+                        <div className='box' onClick={()=>{
+                            handleSingleFood(el)
+                        }}>
                             <div><img src={el.img} alt="" /></div>
                             <div>{el.name}</div>
                             <div>{el.ingredients}</div>
                             <div>
                                 <button onClick={()=>{
+                                    handleUpdate(el._id)
                                     navigate("/update")
                                 }}>Edit</button>
                                 <button onClick={()=>handleDelete(el._id)}>Delete</button>

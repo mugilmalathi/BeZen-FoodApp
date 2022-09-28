@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router';
 import "./account.scss"
 import { Link } from 'react-router-dom';
+import "../Responsive/Responsive.scss"
 
 const Signin = () => {
 

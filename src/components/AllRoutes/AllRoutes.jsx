@@ -5,6 +5,7 @@ import Signup from '../Account/Signup'
 import Footer from '../Footer/Footer'
 import AddRecipe from '../Home/AddRecipe'
 import Home from '../Home/Home'
+import SingleFood from '../Home/SingleFood'
 import UpdateData from '../Home/UpdateData'
 import Navbar from '../Navbar/Navbar'
 
@@ -18,6 +19,7 @@ const AllRoutes = () => {
             <Route path="/add" element={<AddRecipe />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
+            <Route path="/singleFood" element={<SingleFood />} />
         </Routes>
         <Footer />
     </div>

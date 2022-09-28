@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import "./account.scss"
+import "../Responsive/Responsive.scss"
 
 const Signup = () => {
     const [data, setData] = useState({
