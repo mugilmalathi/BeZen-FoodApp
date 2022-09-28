@@ -9,6 +9,7 @@
   <li>Mapped food datas using own API.</li>
   <li>Edit and Delete the particular Food recipe.</li>
   <li>View the Particular Single Food recipe by clikcing the food card.</li>
+  <li>Responsively done for All screens like small screens and the medium screens.</li>
 </ul>
 
 <h3 align="left">Tech Stacks:</h3>
@@ -27,21 +28,19 @@ Signup Page:
 ![](/screenshots/signup.png)
 SignIn Page:
 ![](/screenshots/signin.png)
- Footer:
- ![](/screenshots/mart3.png)
-  Signup Page:
-  ![](/screenshots/mart4.png)
-   SignIn Page:
-   ![](/screenshots/mart5.png)
-    Product Page:
-    ![](/screenshots/mart6.png)
-     Product Features Page:
-     ![](/screenshots/mart7.png)
-      Cart Page:
-      ![](/screenshots/mart8.png)
-       Checkout Page:
-       ![](/screenshots/mart9.png)
-        Payment Page:
-        ![](/screenshots/mart10.png)
-         Payment Successful Page:
-         ![](/screenshots/mart11.png)
+ Landing Page:
+ ![](/screenshots/landingpage.png)
+  Add Recipe Page:
+  ![](/screenshots/add.png)
+   Search Filter:
+   ![](/screenshots/search.png)
+    Edit Food Recipe Page:
+    ![](/screenshots/edit.png)
+     Single Food REcipe Page:
+     ![](/screenshots/singlefood.png)
+      Small Screen:
+      ![](/screenshots/smallscreen.png)
+        Medium Screen:
+       ![](/screenshots/mediumscreen.png)
+        Footer:
+        ![](/screenshots/footer.png)
