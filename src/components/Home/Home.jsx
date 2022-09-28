@@ -58,15 +58,22 @@ const Home = () => {
                 return (
                   <div
                     className="box"
-                    onClick={() => {
-                      handleSingleFood(el);
-                    }}
                   >
                     <div>
-                      <img src={el.img} alt="" />
+                      <img 
+                        src={el.img} 
+                        alt="" 
+                        onClick={() => {
+                            handleSingleFood(el);
+                        }}
+                    />
                     </div>
-                    <div>{el.name}</div>
-                    <div>{el.ingredients}</div>
+                    <div onClick={() => {
+                      handleSingleFood(el);
+                    }}>{el.name}</div>
+                    <div onClick={() => {
+                      handleSingleFood(el);
+                    }}>{el.ingredients}</div>
                     <div>
                       <button
                         onClick={() => {

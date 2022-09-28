@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
-import "../Responsive/Responsive.scss"
-import { FaSearch } from "react-icons/fa";
+import "../Responsive/Responsive.scss";
 
 const Navbar = () => {
   const handleLogout = () => {
@@ -21,7 +20,7 @@ const Navbar = () => {
       )}
 
       {JSON.parse(localStorage.getItem("email")) ? (
-        <Link>
+        <Link to="/logout">
           <div onClick={handleLogout}>Logout</div>
         </Link>
       ) : (

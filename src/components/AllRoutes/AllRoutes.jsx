@@ -17,6 +17,7 @@ const AllRoutes = () => {
             <Route path="/" element={<Home />} />
             <Route path="/update" element={<UpdateData />} />
             <Route path="/add" element={<AddRecipe />} />
+            <Route path="/logout" element={JSON.parse(localStorage.getItem("email")) ? <Home /> : <Signup />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/singleFood" element={<SingleFood />} />
